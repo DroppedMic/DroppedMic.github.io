@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>10 Prompting Insights Most People Miss — LinkedIn Carousel</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        :root {
+            --bg-dark: #0a0e27;
+            --bg-card: #141937;
+            --accent: #6366f1;
+            --accent-bright: #818cf8;
+            --accent-glow: #a5b4fc;
+            --text-primary: #f8fafc;
+            --text-secondary: #cbd5e1;
+            --text-muted: #94a3b8;
+            --border: #1e2547;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, Roboto, sans-serif;
+            background: #020617;
+            padding: 40px 20px;
+            min-height: 100vh;
+        }
+
+        .carousel-wrapper {
+            max-width: 1080px;
+            margin: 0 auto;
+        }
+
+        .print-instructions {
+            background: var(--bg-card);
+            color: var(--text-secondary);
+            padding: 20px 28px;
+            border-radius: 12px;
+            margin-bottom: 40px;
+            border: 1px solid var(--border);
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        .print-instructions h2 {
+            color: var(--text-primary);
+            font-size: 16px;
+            margin-bottom: 8px;
+        }
+
+        .print-instructions code {
+            background: #0a0e27;
+            padding: 2px 6px;
+            border-radius: 4px;
+            color: var(--accent-glow);
+            font-size: 13px;
+        }
+
+        .slide {
+            width: 1080px;
+            height: 1350px;
+            background: linear-gradient(135deg, #0a0e27 0%, #141937 100%);
+            color: var(--text-primary);
+            padding: 90px 80px;
+            margin: 0 auto 40px;
+            border-radius: 24px;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+            page-break-after: always;
+        }
+
+        .slide::before {
+            content: "";
+            position: absolute;
+            top: -200px;
+            right: -200px;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(99,102,241,0.25) 0%, transparent 70%);
+            border-radius: 50%;
+            pointer-events: none;
+        }
+
+        .slide::after {
+            content: "";
+            position: absolute;
+            bottom: -150px;
+            left: -150px;
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, rgba(129,140,248,0.15) 0%, transparent 70%);
+            border-radius: 50%;
+            pointer-events: none;
+        }
+
+        .slide-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: relative;
+            z-index: 2;
+        }
+
+        .brand {
+            font-size: 22px;
+            font-weight: 700;
+            color: var(--accent-glow);
+            letter-spacing: -0.5px;
+        }
+
+        .brand-dot {
+            display: inline-block;
+            width: 12px;
+            height: 12px;
+            background: var(--accent-bright);
+            border-radius: 50%;
+            margin-right: 10px;
+            vertical-align: middle;
+            box-shadow: 0 0 20px var(--accent-bright);
+        }
+
+        .slide-number {
+            font-size: 18px;
+            font-weight: 600;
+            color: var(--text-muted);
+            letter-spacing: 1px;
+        }
+
+        .slide-body {
+            position: relative;
+            z-index: 2;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .slide-footer {
+            position: relative;
+            z-index: 2;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: var(--text-muted);
+            font-size: 16px;
+        }
+
+        .swipe {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-weight: 500;
+            color: var(--accent-glow);
+        }
+
+        /* Cover slide */
+        .cover .eyebrow {
+            font-size: 24px;
+            font-weight: 600;
+            color: var(--accent-glow);
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            margin-bottom: 32px;
+        }
+
+        .cover h1 {
+            font-size: 92px;
+            font-weight: 800;
+            line-height: 1.02;
+            letter-spacing: -2.5px;
+            margin-bottom: 40px;
+        }
+
+        .cover h1 .highlight {
+            color: var(--accent-bright);
+            display: block;
+        }
+
+        .cover .sub {
+            font-size: 32px;
+            line-height: 1.4;
+            color: var(--text-secondary);
+            max-width: 90%;
+            font-weight: 400;
+        }
+
+        /* Tip slides */
+        .tip-number {
+            display: inline-block;
+            font-size: 140px;
+            font-weight: 900;
+            line-height: 1;
+            color: var(--accent-bright);
+            margin-bottom: 30px;
+            letter-spacing: -5px;
+            text-shadow: 0 0 60px rgba(129,140,248,0.4);
+        }
+
+        .tip-title {
+            font-size: 58px;
+            font-weight: 800;
+            line-height: 1.08;
+            letter-spacing: -1.5px;
+            margin-bottom: 36px;
+        }
+
+        .tip-body {
+            font-size: 30px;
+            line-height: 1.45;
+            color: var(--text-secondary);
+            font-weight: 400;
+        }
+
+        .tip-body strong {
+            color: var(--text-primary);
+            background: linear-gradient(180deg, transparent 60%, rgba(99,102,241,0.35) 60%);
+            padding: 0 4px;
+            font-weight: 600;
+        }
+
+        /* Bonus slide */
+        .bonus-badge {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--accent) 0%, var(--accent-bright) 100%);
+            color: white;
+            padding: 12px 24px;
+            border-radius: 100px;
+            font-size: 22px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 32px;
+            box-shadow: 0 10px 40px rgba(99,102,241,0.4);
+        }
+
+        .stack-list {
+            list-style: none;
+            margin: 36px 0;
+        }
+
+        .stack-list li {
+            font-size: 32px;
+            line-height: 1.4;
+            padding: 18px 0 18px 56px;
+            color: var(--text-primary);
+            position: relative;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .stack-list li:last-child { border-bottom: none; }
+
+        .stack-list li::before {
+            content: "→";
+            position: absolute;
+            left: 0;
+            color: var(--accent-bright);
+            font-weight: 700;
+            font-size: 36px;
+        }
+
+        /* CTA slide */
+        .cta h1 {
+            font-size: 84px;
+            font-weight: 800;
+            line-height: 1.05;
+            letter-spacing: -2px;
+            margin-bottom: 40px;
+        }
+
+        .cta .cta-sub {
+            font-size: 30px;
+            line-height: 1.5;
+            color: var(--text-secondary);
+            margin-bottom: 48px;
+        }
+
+        .cta-actions {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+
+        .cta-action {
+            display: flex;
+            align-items: center;
+            gap: 24px;
+            font-size: 28px;
+            color: var(--text-primary);
+        }
+
+        .cta-icon {
+            flex-shrink: 0;
+            width: 72px;
+            height: 72px;
+            background: rgba(99,102,241,0.15);
+            border: 2px solid var(--accent);
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 36px;
+            color: var(--accent-bright);
+            font-weight: 800;
+        }
+
+        /* Print: each slide on its own page */
+        @media print {
+            body { background: white; padding: 0; }
+            .print-instructions { display: none; }
+            .slide {
+                margin: 0;
+                border-radius: 0;
+                box-shadow: none;
+                page-break-after: always;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="carousel-wrapper">
+
+        <div class="print-instructions">
+            <h2>How to export for LinkedIn</h2>
+            Each slide is sized 1080&times;1350 (LinkedIn's 4:5 portrait). To export:
+            open this file in Chrome &rarr; <code>Cmd/Ctrl + P</code> &rarr; <strong>Destination: Save as PDF</strong> &rarr;
+            <strong>Paper size: Custom</strong> 1080&times;1350 &rarr; <strong>Margins: None</strong> &rarr;
+            <strong>Background graphics: On</strong>. Then upload the PDF directly to a LinkedIn post as a document.
+        </div>
+
+        <!-- SLIDE 1 — COVER -->
+        <section class="slide cover">
+            <div class="slide-header">
+                <div class="brand"><span class="brand-dot"></span>DroppedMic</div>
+                <div class="slide-number">01 / 12</div>
+            </div>
+            <div class="slide-body">
+                <div class="eyebrow">Prompting &middot; Advanced</div>
+                <h1>
+                    10 Prompting Insights
+                    <span class="highlight">Most People Miss</span>
+                </h1>
+                <p class="sub">Lesser-known techniques the top 1% of prompt engineers quietly use every day.</p>
+            </div>
+            <div class="slide-footer">
+                <span>A field guide</span>
+                <span class="swipe">Swipe &rarr;</span>
+            </div>
+        </section>
+
+        <!-- SLIDE 2 — TIP 1 -->
+        <section class="slide">
+            <div class="slide-header">
+                <div class="brand"><span class="brand-dot"></span>DroppedMic</div>
+                <div class="slide-number">02 / 12</div>
+            </div>
+            <div class="slide-body">
+                <div class="tip-number">01</div>
+                <h2 class="tip-title">Chain-of-thought boosts accuracy 30&ndash;50%</h2>
+                <p class="tip-body">Just adding <strong>"think step by step"</strong> forces the model to show intermediate work &mdash; catching errors it would otherwise make silently on reasoning tasks.</p>
+            </div>
+            <div class="slide-footer">
+                <span>Tip 1 of 10</span>
+                <span class="swipe">Swipe &rarr;</span>
+            </div>
+        </section>
+
+        <!-- SLIDE 3 — TIP 2 -->
+        <section class="slide">
+            <div class="slide-header">
+                <div class="brand"><span class="brand-dot"></span>DroppedMic</div>
+                <div class="slide-number">03 / 12</div>
+            </div>
+            <div class="slide-body">
+                <div class="tip-number">02</div>
+                <h2 class="tip-title">Negative prompting beats positive prompting</h2>
+                <p class="tip-body">Telling an LLM what <strong>NOT</strong> to do ("don't use jargon," "don't summarize") is often more effective than describing what you want. Models anchor harder to explicit exclusions.</p>
+            </div>
+            <div class="slide-footer">
+                <span>Tip 2 of 10</span>
+                <span class="swipe">Swipe &rarr;</span>
+            </div>
+        </section>
+
+        <!-- SLIDE 4 — TIP 3 -->
+        <section class="slide">
+            <div class="slide-header">
+                <div class="brand"><span class="brand-dot"></span>DroppedMic</div>
+                <div class="slide-number">04 / 12</div>
+            </div>
+            <div class="slide-body">
+                <div class="tip-number">03</div>
+                <h2 class="tip-title">Temperature 0 &ne; identical outputs</h2>
+                <p class="tip-body">Even at zero temperature, API responses vary slightly due to <strong>floating-point non-determinism</strong> on GPUs. True reproducibility requires seeding at the infrastructure level.</p>
+            </div>
+            <div class="slide-footer">
+                <span>Tip 3 of 10</span>
+                <span class="swipe">Swipe &rarr;</span>
+            </div>
+        </section>
+
+        <!-- SLIDE 5 — TIP 4 -->
+        <section class="slide">
+            <div class="slide-header">
+                <div class="brand"><span class="brand-dot"></span>DroppedMic</div>
+                <div class="slide-number">05 / 12</div>
+            </div>
+            <div class="slide-body">
+                <div class="tip-number">04</div>
+                <h2 class="tip-title">The "persona sandwich" trick</h2>
+                <p class="tip-body">Place your persona instruction at <strong>both the beginning AND end</strong> of the system prompt. Models weight the first and last tokens more heavily &mdash; primacy and recency bias work in your favor.</p>
+            </div>
+            <div class="slide-footer">
+                <span>Tip 4 of 10</span>
+                <span class="swipe">Swipe &rarr;</span>
+            </div>
+        </section>
+
+        <!-- SLIDE 6 — TIP 5 -->
+        <section class="slide">
+            <div class="slide-header">
+                <div class="brand"><span class="brand-dot"></span>DroppedMic</div>
+                <div class="slide-number">06 / 12</div>
+            </div>
+            <div class="slide-body">
+                <div class="tip-number">05</div>
+                <h2 class="tip-title">Few-shot examples beat long instructions</h2>
+                <p class="tip-body"><strong>Three concrete input/output examples</strong> consistently outperform two paragraphs of detailed rules. Models learn patterns faster than they follow prose.</p>
+            </div>
+            <div class="slide-footer">
+                <span>Tip 5 of 10</span>
+                <span class="swipe">Swipe &rarr;</span>
+            </div>
+        </section>
+
+        <!-- SLIDE 7 — TIP 6 -->
+        <section class="slide">
+            <div class="slide-header">
+                <div class="brand"><span class="brand-dot"></span>DroppedMic</div>
+                <div class="slide-number">07 / 12</div>
+            </div>
+            <div class="slide-body">
+                <div class="tip-number">06</div>
+                <h2 class="tip-title">XML tags are cognitive guardrails</h2>
+                <p class="tip-body">Wrapping sections in <strong>&lt;context&gt;</strong> or <strong>&lt;constraints&gt;</strong> gives the model structural anchors that reduce hallucination and drift &mdash; especially on long prompts.</p>
+            </div>
+            <div class="slide-footer">
+                <span>Tip 6 of 10</span>
+                <span class="swipe">Swipe &rarr;</span>
+            </div>
+        </section>
+
+        <!-- SLIDE 8 — TIP 7 -->
+        <section class="slide">
+            <div class="slide-header">
+                <div class="brand"><span class="brand-dot"></span>DroppedMic</div>
+                <div class="slide-number">08 / 12</div>
+            </div>
+            <div class="slide-body">
+                <div class="tip-number">07</div>
+                <h2 class="tip-title">Politeness wastes tokens</h2>
+                <p class="tip-body"><strong>"Please" and "thank you"</strong> consume tokens without improving output quality. In production, stripping courtesy saves cost with zero performance loss.</p>
+            </div>
+            <div class="slide-footer">
+                <span>Tip 7 of 10</span>
+                <span class="swipe">Swipe &rarr;</span>
+            </div>
+        </section>
+
+        <!-- SLIDE 9 — TIP 8 -->
+        <section class="slide">
+            <div class="slide-header">
+                <div class="brand"><span class="brand-dot"></span>DroppedMic</div>
+                <div class="slide-number">09 / 12</div>
+            </div>
+            <div class="slide-body">
+                <div class="tip-number">08</div>
+                <h2 class="tip-title">Confidence scores surface hidden uncertainty</h2>
+                <p class="tip-body">Append <strong>"rate your confidence 1&ndash;10 and explain why"</strong> to force self-evaluation. Responses rated below 7 correlate strongly with factual errors.</p>
+            </div>
+            <div class="slide-footer">
+                <span>Tip 8 of 10</span>
+                <span class="swipe">Swipe &rarr;</span>
+            </div>
+        </section>
+
+        <!-- SLIDE 10 — TIP 9 -->
+        <section class="slide">
+            <div class="slide-header">
+                <div class="brand"><span class="brand-dot"></span>DroppedMic</div>
+                <div class="slide-number">10 / 12</div>
+            </div>
+            <div class="slide-body">
+                <div class="tip-number">09</div>
+                <h2 class="tip-title">Order matters more than length</h2>
+                <p class="tip-body">Put your <strong>most critical instruction first</strong> and your <strong>output format last</strong>. This beats burying both in the middle of a long, dense prompt every time.</p>
+            </div>
+            <div class="slide-footer">
+                <span>Tip 9 of 10</span>
+                <span class="swipe">Swipe &rarr;</span>
+            </div>
+        </section>
+
+        <!-- SLIDE 11 — TIP 10 -->
+        <section class="slide">
+            <div class="slide-header">
+                <div class="brand"><span class="brand-dot"></span>DroppedMic</div>
+                <div class="slide-number">11 / 12</div>
+            </div>
+            <div class="slide-body">
+                <div class="tip-number">10</div>
+                <h2 class="tip-title">Give the model an "out"</h2>
+                <p class="tip-body">Adding <strong>"if you don't know, say so"</strong> measurably reduces hallucination. It gives the model permission to be uncertain instead of forcing a confident-sounding fabrication.</p>
+            </div>
+            <div class="slide-footer">
+                <span>Tip 10 of 10</span>
+                <span class="swipe">Swipe &rarr;</span>
+            </div>
+        </section>
+
+        <!-- SLIDE 12 — BONUS + CTA -->
+        <section class="slide cta">
+            <div class="slide-header">
+                <div class="brand"><span class="brand-dot"></span>DroppedMic</div>
+                <div class="slide-number">12 / 12</div>
+            </div>
+            <div class="slide-body">
+                <div class="bonus-badge">&#9733; Bonus Stack</div>
+                <h1>The highest-leverage prompting stack</h1>
+                <p class="cta-sub">Combine these three and you'll outperform 95% of prompt engineers:</p>
+                <ul class="stack-list">
+                    <li>Persona sandwich (tip #4)</li>
+                    <li>XML structure (tip #6)</li>
+                    <li>Few-shot examples (tip #5)</li>
+                </ul>
+            </div>
+            <div class="slide-footer">
+                <span>Which tip surprised you?</span>
+                <span class="swipe">Save &amp; Share</span>
+            </div>
+        </section>
+
+    </div>
+</body>
+</html>
