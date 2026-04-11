@@ -1,0 +1,277 @@
+{
+  "style_name": "Absolute Batman - Dragotta/Martin Brutalist Vigilante",
+  "source_reference": {
+    "title": "Absolute Batman (DC All In, 2024-present)",
+    "primary_artist": "Nick Dragotta",
+    "colorist": "Frank Martin",
+    "writer": "Scott Snyder",
+    "influences": [
+      "Frank Miller (Dark Knight Returns bulk and weight)",
+      "Mike Mignola (spot blacks and silhouette language)",
+      "Sean Murphy (urban grit and architectural linework)",
+      "Jim Lee (heroic cover compositions)",
+      "Jerome Opena (dynamic inking textures)"
+    ]
+  },
+  "overall_aesthetic": {
+    "descriptors": [
+      "brutalist",
+      "industrial",
+      "working-class vigilante",
+      "heavy-metal album cover energy",
+      "oppressive urban mythology",
+      "DIY weaponized prototype armor",
+      "monumental hero iconography"
+    ],
+    "mood": "grim, stoic, kinetic, menacing, reverent",
+    "genre_cues": "neo-noir superhero, gothic industrial, post-apocalyptic urban"
+  },
+  "character_design": {
+    "figure": {
+      "body_type": "massively hulking powerlifter build; trapezoidal silhouette dominated by shoulders and chest",
+      "proportions": {
+        "head_to_body_ratio": "1:7 (head deliberately small relative to enlarged torso and shoulders)",
+        "shoulder_width": "exaggerated, roughly 3.5 head-widths across",
+        "neck": "thick, nearly invisible between cowl and trapezius",
+        "waist": "narrow relative to chest to accentuate V-taper",
+        "legs": "tree-trunk thick, planted wide, emphasizing weight",
+        "hands": "oversized, meaty, gauntleted, often clenched"
+      },
+      "posture": "grounded, heavy, low center of gravity; almost always in a hero stance or menacing stride"
+    },
+    "costume": {
+      "cowl": {
+        "shape": "angular, faceted, short sharply-pointed bat ears that lean slightly forward",
+        "eye_slits": "pure white, blank, no pupils, slightly narrowed into hostile slants",
+        "jawline": "exposed, square, stoic; often with 5 o'clock shadow or gritted teeth",
+        "material_feel": "rigid composite, matte black with subtle blue tonal gradient on highlights"
+      },
+      "chest_emblem": {
+        "design": "segmented, wraparound armored bat-symbol that functions like a chest plate",
+        "pattern": "grid of square/rectangular plates forming a stylized bat across pectorals",
+        "color": "matte black plates with cool dark blue facets, never glossy",
+        "note": "this is the single most recognizable element - the bat is engineered, not painted"
+      },
+      "shoulders_and_arms": {
+        "spikes": "asymmetrical cluster of jagged metal spikes erupting from the left shoulder and trapezius, scrap-built, varying lengths",
+        "gauntlets": "horizontally ribbed/striped vambraces with banded segmentation, 6-8 ridges per forearm",
+        "fin_blades": "optional curved scalloped fin-blades on the outer forearm"
+      },
+      "cape": {
+        "length": "long, reaches to ankles, often pools on floor",
+        "edges": "jagged, tattered, torn into irregular triangular tails",
+        "interior_color": "deep black with subtle blue wash on folds",
+        "movement": "heavy, weighted, rarely billowing - falls like chainmail",
+        "attachment": "clasped at shoulders, sometimes appearing stitched or bolted"
+      },
+      "torso_and_belt": {
+        "belt": "thick industrial strap with large rectangular utility pouches, military/construction-grade buckle",
+        "waist_area": "black trunks over tactical pants, no bright colors"
+      },
+      "legs_and_boots": {
+        "pants": "matte black tactical/workwear with subtle paneling",
+        "boots": "heavy, steel-toed, treadworn, reach mid-calf"
+      },
+      "weapon": {
+        "primary": "oversized double-headed firefighter axe or sledgehammer with wrapped grip",
+        "handling": "carried one-handed, dragged low, grip pose suggests immense weight",
+        "secondary": "batarangs shaped like curved claw blades, elongated and serrated"
+      }
+    }
+  },
+  "line_work": {
+    "weight": "thick, variable, confident; outer contours heaviest, interior details thinner",
+    "ink_approach": "brush-inked feel with organic thick-to-thin modulation",
+    "hatching": {
+      "style": "angular parallel hatching, occasional crosshatch on deep shadows",
+      "density": "used sparingly - Dragotta prefers spot black over rendering",
+      "direction": "follows form contour; verticals dominate on cityscapes"
+    },
+    "spot_blacks": {
+      "usage": "aggressive, sculptural, covering 40-60% of character areas",
+      "purpose": "define silhouette, carve form, create abstract negative space"
+    },
+    "texture_marks": "rough deckle edges, occasional drybrush scratches on cape and weapons",
+    "cleanliness": "intentionally gritty and imperfect - never slick or vector-clean"
+  },
+  "color_palette": {
+    "dominant_hues": {
+      "character": [
+        {"name": "ink black", "hex": "#0B0E14"},
+        {"name": "midnight navy", "hex": "#101B2E"},
+        {"name": "steel blue", "hex": "#2B4A6E"},
+        {"name": "cool highlight cyan", "hex": "#6FB8D6"},
+        {"name": "cool gray", "hex": "#5C6B7A"}
+      ],
+      "background_city": [
+        {"name": "twilight magenta", "hex": "#6B3A78"},
+        {"name": "dusk purple", "hex": "#3D2A5C"},
+        {"name": "sodium amber", "hex": "#E88A3C"},
+        {"name": "window warm", "hex": "#F4B860"},
+        {"name": "deep violet shadow", "hex": "#1C1430"}
+      ],
+      "accent": [
+        {"name": "logo cerulean (DC)", "hex": "#1FA9E3"},
+        {"name": "rim light teal", "hex": "#3FD8E6"},
+        {"name": "blood red (rare)", "hex": "#B0202A"}
+      ]
+    },
+    "palette_logic": "limited split-complementary - cool blues on character against warm ambers/magentas in backgrounds",
+    "saturation": "high chroma on environment, desaturated and tonal on the figure",
+    "value_structure": "low-key, 70% of frame sits in the bottom third of the value scale"
+  },
+  "lighting": {
+    "key_light": "offscreen high contrast, usually from above-back creating strong rim",
+    "rim_light": {
+      "color": "cyan or magenta",
+      "placement": "along shoulder, cowl edge, cape contour",
+      "intensity": "electric, glowing, nearly neon"
+    },
+    "fill_light": "minimal - shadows stay crushed and graphic",
+    "ambient": "dominated by city glow (warm amber or cold purple), wraps environment not figure",
+    "atmospheric_perspective": "heavy haze on distant buildings, glowing window grids bleed into sky",
+    "effects": [
+      "light bloom on rim edges",
+      "color fringing where warm city meets cold character",
+      "subtle chromatic halation around light sources"
+    ]
+  },
+  "composition": {
+    "camera_angles": [
+      "extreme low angle / worm's eye (hero shot)",
+      "centered symmetrical portrait for covers",
+      "slight dutch tilt for action interiors"
+    ],
+    "framing": "Batman occupies 60-80% of vertical frame, head near top third",
+    "background_architecture": {
+      "content": "towering skyscrapers, window grids, construction scaffolding, gothic spires",
+      "treatment": "rendered as luminous silhouettes, never competing with figure",
+      "perspective": "aggressive one-point or two-point perspective with converging verticals"
+    },
+    "negative_space": "deep blacks used to isolate figure and force silhouette reading",
+    "horizon_line": "kept low, often below frame, to enlarge the figure"
+  },
+  "rendering_techniques": {
+    "form_modeling": "planar shading - blocks of color describing facets rather than smooth gradients",
+    "highlights": "hard-edged specular blocks on metal and leather, not soft blends",
+    "shadows": "graphic shapes, often abstracted into geometric chunks",
+    "transitions": "minimal midtones - mostly two-tone modeling (dark base + rim accent)",
+    "texture": "subtle halftone or stipple grain on backgrounds for print feel",
+    "print_feel": "retains newsprint CMYK honesty - not over-polished digital"
+  },
+  "typography_and_cover_layout": {
+    "logo_treatment": "ABSOLUTE in thin caps above giant hand-drawn BATMAN wordmark",
+    "batman_wordmark": "bold cyan/teal sans, slightly bevelled, oversized, filling top quarter",
+    "dc_bug": "classic circular DC All In roundel top-right in cerulean",
+    "credits": "small stacked sans-serif caps bottom-right, white on black",
+    "issue_number": "boxed numeral inside bat silhouette",
+    "price_tag": "upper right under DC bug"
+  },
+  "generation_prompt_template": {
+    "positive_prompt": "Absolute Batman in the style of Nick Dragotta and Frank Martin, hulking brutalist powerlifter proportions, trapezoidal silhouette with exaggerated shoulders, segmented wraparound armored bat chest-plate made of matte black grid panels, asymmetrical jagged scrap-metal spikes erupting from left shoulder, short angular bat-ears cowl with blank white eye slits, horizontally ribbed steel gauntlets, long jagged tattered cape pooling at ankles, oversized double-headed firefighter axe dragged at his side, heavy tactical boots, extreme low-angle hero shot, standing atop Gotham rooftop, towering skyscrapers behind with glowing amber window grids, twilight magenta and dusk purple sky, cool cyan rim light on cowl and shoulders, desaturated steel blue figure against high-chroma warm city, heavy spot-black inking, thick confident brush lines, minimal hatching, planar shading, two-tone modeling, graphic shadow shapes, cinematic noir lighting, gritty print-era comic finish, monumental iconographic composition",
+    "negative_prompt": "slim build, athletic superhero proportions, smooth gradient rendering, soft airbrush shading, pastel palette, cheerful lighting, clean vector lines, anime style, chibi, photorealistic skin pores, glossy plastic armor, bright saturated primary colors on costume, yellow oval chest emblem, long cape billowing like flag, classic comics blue-gray costume, cartoon outlines, low contrast, daylight scene, sunny sky, white background",
+    "technical_tags": [
+      "comic book illustration",
+      "ink and digital color",
+      "Nick Dragotta style",
+      "Frank Martin colors",
+      "Scott Snyder Absolute Batman",
+      "DC All In 2024",
+      "brutalist superhero",
+      "noir urban cinematography",
+      "cover art composition",
+      "low-angle hero shot",
+      "split-complementary palette",
+      "spot black inking",
+      "planar shading"
+    ]
+  },
+  "structured_scene_schema": {
+    "character": {
+      "identity": "Absolute Batman",
+      "build": "hulking powerlifter, 6'6 frame, 300lb musculature",
+      "pose": "planted low-stance hero pose, weight on back foot, axe dragging",
+      "facial_expression": "stoic, gritted jaw, blank white eye slits narrowed",
+      "costume_checklist": [
+        "angular short-eared cowl",
+        "segmented grid bat chest-plate",
+        "asymmetrical left-shoulder scrap spikes",
+        "ribbed steel forearm gauntlets",
+        "utility belt with rectangular pouches",
+        "black trunks over tactical pants",
+        "jagged ankle-length cape",
+        "steel-toed combat boots"
+      ],
+      "weapon": "oversized wrapped-grip firefighter axe held one-handed"
+    },
+    "environment": {
+      "location": "Gotham City rooftop or alley",
+      "time_of_day": "twilight / blue hour / deep night",
+      "background_elements": [
+        "towering skyscraper silhouettes",
+        "glowing amber window grids",
+        "construction cranes",
+        "gothic ornamental spires",
+        "distant bridge lights"
+      ],
+      "atmosphere": "humid urban haze, light bloom, subtle chromatic halation"
+    },
+    "camera": {
+      "angle": "extreme low worm's-eye",
+      "lens": "35mm wide, slight barrel distortion",
+      "framing": "full figure, head near top of frame, horizon below waist",
+      "depth_of_field": "deep focus with atmospheric falloff"
+    },
+    "lighting": {
+      "key": "high back-left",
+      "rim": "cyan edge along cowl, shoulder, cape",
+      "ambient": "warm amber from city, cool purple from sky",
+      "shadow_style": "crushed graphic blacks, no lifted shadows"
+    },
+    "color_direction": {
+      "character": "desaturated cool blues and inky blacks",
+      "background": "saturated warm amber contrasted with dusk purple",
+      "accents": "cerulean and teal rim pops",
+      "overall": "split-complementary cool-vs-warm tension"
+    },
+    "rendering": {
+      "line": "thick brush inks with variable weight",
+      "black_ratio": "50-60% coverage",
+      "shading": "planar two-tone, minimal hatching, spot blacks dominant",
+      "texture": "subtle halftone grain, gritty print feel",
+      "finish": "comic cover, non-photoreal, illustrated"
+    }
+  },
+  "do_and_dont_rules": {
+    "do": [
+      "keep the bat emblem as a segmented armor plate, never a flat painted symbol",
+      "include at least one set of asymmetrical scrap spikes on the left shoulder",
+      "use crushed blacks - shadows should feel graphic and sculptural",
+      "contrast cool desaturated figure against warm high-chroma Gotham",
+      "anchor the character with a low horizon and monumental framing",
+      "draw the cape jagged and heavy, never smooth or flowing like silk",
+      "give Batman a hand weapon (axe, hammer, or wrench) whenever plausible"
+    ],
+    "dont": [
+      "do not slim Batman into a classic athletic build",
+      "do not use the yellow oval chest emblem",
+      "do not render with smooth airbrush gradients",
+      "do not add bright primary color costume elements",
+      "do not light the scene in flat daylight",
+      "do not use clean vector outlines - keep lines organic and inked",
+      "do not place Batman in a symmetrical standing pose without weight shift"
+    ]
+  },
+  "replication_checklist": [
+    "Silhouette reads as Batman from 50 feet away via grid bat-plate and spikes",
+    "Left-shoulder asymmetry present",
+    "Eye slits are solid white and narrowed",
+    "Cape edges are jagged and tattered",
+    "Palette is split-complementary cool-vs-warm",
+    "Camera is low angle",
+    "Background is a glowing Gotham skyline",
+    "Inks are thick and brush-like",
+    "Spot blacks cover at least 40% of the figure",
+    "A melee weapon (axe/hammer) is visible"
+  ]
+}
