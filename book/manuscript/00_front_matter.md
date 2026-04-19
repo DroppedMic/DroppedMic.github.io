@@ -1,7 +1,7 @@
 # Dedication
 
-For the eleven who walked into an empty building at 360 East 145th Street
-in September of 2003 and decided it was going to be a school.
+For the eleven who walked into an empty building in Mott Haven in
+September of 2003 and decided it was going to be a school.
 
 For every child who has ever been told the zip code on their birth
 certificate was a prophecy.
@@ -51,8 +51,8 @@ Spring 2026
 This is not a textbook. It is a field book.
 
 Every framework in these pages has been tested in a building. My
-building, at 360 East 145th Street, for eighteen years. And in the
-buildings of the principals I have coached, from Mott Haven to Manama.
+building, in Mott Haven, for eighteen years. And in the buildings of
+the principals I have coached, from the South Bronx to Manama.
 The theory is here because it earned its place. The stories are here
 because they are the theory.
 
