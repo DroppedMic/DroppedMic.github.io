@@ -1,0 +1,41 @@
+---
+title: "Coaching the Lead Learner"
+subtitle: "A Principal's Field Book for Building Leaders Who Build Schools"
+author: "Ramón M. González, Ed.D."
+date: "2026"
+publisher: "Independently published via Amazon KDP"
+language: en-US
+rights: "Copyright 2026 Ramón M. González. All rights reserved."
+
+documentclass: book
+classoption:
+  - 11pt
+  - openright
+  - twoside
+papersize: "6in:9in"
+geometry:
+  - paperwidth=6in
+  - paperheight=9in
+  - inner=0.875in
+  - outer=0.625in
+  - top=0.75in
+  - bottom=0.75in
+  - bindingoffset=0.125in
+mainfont: "EB Garamond"
+sansfont: "Inter"
+monofont: "JetBrains Mono"
+fontsize: 11pt
+linestretch: 1.15
+indent: true
+toc: true
+toc-depth: 1
+numbersections: false
+secnumdepth: 0
+linkcolor: black
+urlcolor: black
+citecolor: black
+bibliography: references.bib
+csl: csl/apa.csl
+link-citations: true
+reference-section-title: "References"
+---
